@@ -26,7 +26,7 @@ public class ExampleResource {
 	}
     
 	@GET
-    @Produces(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
 	public List<Example> getAllExamples() {
         return examples;
 	}
