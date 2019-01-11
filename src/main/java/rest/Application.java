@@ -14,12 +14,12 @@ import rest.config.RestConfig;
 public class Application {
 
 	public static void main(String[] args) throws LifecycleException, ServletException {
-		Tomcat tomcat = new Tomcat();
+        Tomcat tomcat = new Tomcat();
         tomcat.setPort(8080);
         Context context = tomcat.addWebapp("/api", new File(".").getAbsolutePath());
         ServletContainer servletContainer = new ServletContainer(new RestConfig());
         tomcat.addServlet("/api", "restConfig", servletContainer);
-        context.addServletMapping("/v1/*", "restConfig");
+        context.addServletMappingDecoded("/v1/*", "restConfig");
         tomcat.start();
         tomcat.getServer().await();
 	}
