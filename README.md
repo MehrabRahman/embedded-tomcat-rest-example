@@ -1,4 +1,4 @@
-# embedded-tomcat-rest-example
+# Embedded-tomcat-rest-example
 A simple example of a REST API with Jersey on an embedded Tomcat
 
 Run `rest.Application` to start a server on `http://localhost:8080/api/v1`
